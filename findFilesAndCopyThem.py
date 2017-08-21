@@ -2,7 +2,7 @@ import os
 import shutil
 
 # globals
-output_dir_toplevel = '/Volumes/external/cloud'
+output_dir_toplevel = '<dest>'
 
 extension_folder_mapping = {'.mp4':output_dir_toplevel + '/' + 'movies',
                             '.mkv':output_dir_toplevel + '/' + 'movies',
@@ -30,7 +30,7 @@ def file_copy(file=None):
       return (file, destination + '/' + file, 'Failure')
    return (file, destination + '/' + file, 'Success')
 
-f = filter_files_by_extension(path = '/Volumes/external/nikki/Users/nickiwahlers/', extension = extension_folder_mapping)
+f = filter_files_by_extension(path = '/<source>/', extension = extension_folder_mapping)
 
 files_copied = list(map(file_copy, f))
 print(files_copied)
